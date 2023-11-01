@@ -1,5 +1,4 @@
 const TelegramApi = require("node-telegram-bot-api")
-const pm2 = require('pm2');
 
 const token = "6552983930:AAFG1lpkmB3iNn9_77BqKr9-FFOKubF6Nr8";
 
@@ -52,16 +51,6 @@ bot.onText(/\/start/, (msg, match) => {
 
   // Отправляем приветственный текст с кнопкой "Меню"
   bot.sendMessage(chatId, welcomeText, options);
-});
-
-
-pm2.connect(function(err) {
-  if (err) throw err;
-
-  setInterval(function() {
-    console.log("Restarting app...");
-    pm2.restart('app', function() {});
-  }, 30000); 
 });
 
 setInterval(function(){
