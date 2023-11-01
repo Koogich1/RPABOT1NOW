@@ -1,5 +1,5 @@
 const TelegramApi = require("node-telegram-bot-api")
-var pm2 = require('pm2');
+const pm2 = require('pm2');
 
 const token = "6552983930:AAFG1lpkmB3iNn9_77BqKr9-FFOKubF6Nr8";
 
